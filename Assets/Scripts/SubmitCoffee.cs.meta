@@ -3,7 +3,10 @@ guid: d24060f90b9753a4e80759df5ca07b2a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - makeCoffee: {instanceID: 0}
+  - sound_success: {fileID: 8300000, guid: e6a5486d93d92464e9c5349bd1ec42c0, type: 3}
+  - sound_fail: {fileID: 8300000, guid: 1e7569b12322c95438ee9f6eed1c8cfc, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

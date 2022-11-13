@@ -11,7 +11,7 @@ public class Buy : MonoBehaviour
 
     public void CanBuy()
     {
-        if (Money.money >= 10000)
+        if (Money.money >= 2000)
         {
             find = GameObject.Find("ClothCanvas").transform.Find("Success");
 
