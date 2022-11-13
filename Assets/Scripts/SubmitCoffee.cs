@@ -76,6 +76,9 @@ public class SubmitCoffee : MonoBehaviour
         //     !makeCoffee.isBasicSparkling
         //    )
 
+        //isAfterIcedTea = this.transform.Find("AfterIcedTea").gameObject.activeSelf;
+        //isAfterGreenTea = this.transform.Find("AfterGreenTea").gameObject.activeSelf;
+
         //반짝반짝 레몬에이드
         if (makeCoffee.goalCoffee == "LemonAde")
         {
@@ -97,7 +100,9 @@ public class SubmitCoffee : MonoBehaviour
                  !makeCoffee.isBasicShot &&
                 !makeCoffee.isBasicWater &&
                 !makeCoffee.isBasicMilk &&
-                 makeCoffee.isBasicSparkling
+                 makeCoffee.isBasicSparkling&&
+                  !makeCoffee.isAfterIcedTea&&
+                  ! makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -122,7 +127,9 @@ public class SubmitCoffee : MonoBehaviour
                  !makeCoffee.isBasicShot &&
                 !makeCoffee.isBasicWater &&
                 !makeCoffee.isBasicMilk &&
-                 makeCoffee.isBasicSparkling
+                 makeCoffee.isBasicSparkling &&
+                  !makeCoffee.isAfterIcedTea &&
+                  !makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -130,7 +137,7 @@ public class SubmitCoffee : MonoBehaviour
         if (makeCoffee.goalCoffee == "IcedTeano")
         {
             if (
-                makeCoffee.isPowderIcedTea &&
+               !makeCoffee.isPowderIcedTea &&
                !makeCoffee.isPowderLuck &&
                 !makeCoffee.isPowderLove &&
                  !makeCoffee.isPowderGreenTea &&
@@ -145,9 +152,11 @@ public class SubmitCoffee : MonoBehaviour
                  makeCoffee.isBasicIce &&
                  !makeCoffee.isBasicCream &&
                  makeCoffee.isBasicShot &&
-                makeCoffee.isBasicWater &&
+               ! makeCoffee.isBasicWater &&
                 !makeCoffee.isBasicMilk &&
-                 !makeCoffee.isBasicSparkling
+                 !makeCoffee.isBasicSparkling &&
+                  makeCoffee.isAfterIcedTea &&
+                  !makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -155,7 +164,7 @@ public class SubmitCoffee : MonoBehaviour
         if (makeCoffee.goalCoffee == "luckIcedTeano")
         {
             if (
-                makeCoffee.isPowderIcedTea &&
+                !makeCoffee.isPowderIcedTea &&
                makeCoffee.isPowderLuck &&
                 !makeCoffee.isPowderLove &&
                  !makeCoffee.isPowderGreenTea &&
@@ -170,9 +179,11 @@ public class SubmitCoffee : MonoBehaviour
                  makeCoffee.isBasicIce &&
                  !makeCoffee.isBasicCream &&
                  makeCoffee.isBasicShot &&
-                makeCoffee.isBasicWater &&
+                !makeCoffee.isBasicWater &&
                 !makeCoffee.isBasicMilk &&
-                 !makeCoffee.isBasicSparkling
+                 !makeCoffee.isBasicSparkling &&
+                  makeCoffee.isAfterIcedTea &&
+                  !makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -184,7 +195,7 @@ public class SubmitCoffee : MonoBehaviour
                 !makeCoffee.isPowderIcedTea &&
                !makeCoffee.isPowderLuck &&
                 !makeCoffee.isPowderLove &&
-                 makeCoffee.isPowderGreenTea &&
+                 !makeCoffee.isPowderGreenTea &&
                  !makeCoffee.isDecoLemon &&
                  !makeCoffee.isDecoClover &&
                  !makeCoffee.isDecoCookie &&
@@ -197,8 +208,10 @@ public class SubmitCoffee : MonoBehaviour
                  !makeCoffee.isBasicCream &&
                  !makeCoffee.isBasicShot &&
                 !makeCoffee.isBasicWater &&
-                makeCoffee.isBasicMilk &&
-                 !makeCoffee.isBasicSparkling
+                !makeCoffee.isBasicMilk &&
+                 !makeCoffee.isBasicSparkling &&
+                  !makeCoffee.isAfterIcedTea &&
+                  makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -211,7 +224,7 @@ public class SubmitCoffee : MonoBehaviour
                 !makeCoffee.isPowderIcedTea &&
                !makeCoffee.isPowderLuck &&
                 makeCoffee.isPowderLove &&
-                 makeCoffee.isPowderGreenTea &&
+                 !makeCoffee.isPowderGreenTea &&
                  !makeCoffee.isDecoLemon &&
                  !makeCoffee.isDecoClover &&
                  !makeCoffee.isDecoCookie &&
@@ -224,8 +237,10 @@ public class SubmitCoffee : MonoBehaviour
                  !makeCoffee.isBasicCream &&
                  !makeCoffee.isBasicShot &&
                 !makeCoffee.isBasicWater &&
-                makeCoffee.isBasicMilk &&
-                 !makeCoffee.isBasicSparkling
+                !makeCoffee.isBasicMilk &&
+                 !makeCoffee.isBasicSparkling &&
+                  !makeCoffee.isAfterIcedTea &&
+                  makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -248,10 +263,12 @@ public class SubmitCoffee : MonoBehaviour
                 !makeCoffee.isSyrupLemon &&
                  makeCoffee.isBasicIce &&
                  makeCoffee.isBasicCream &&
-                 !makeCoffee.isBasicShot &&
+                 makeCoffee.isBasicShot &&
                 !makeCoffee.isBasicWater &&
                 makeCoffee.isBasicMilk &&
-                 !makeCoffee.isBasicSparkling
+                 !makeCoffee.isBasicSparkling &&
+                  !makeCoffee.isAfterIcedTea &&
+                 ! makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
@@ -274,10 +291,12 @@ public class SubmitCoffee : MonoBehaviour
                 !makeCoffee.isSyrupLemon &&
                  makeCoffee.isBasicIce &&
                  makeCoffee.isBasicCream &&
-                 !makeCoffee.isBasicShot &&
+                 makeCoffee.isBasicShot &&
                 !makeCoffee.isBasicWater &&
                 makeCoffee.isBasicMilk &&
-                 !makeCoffee.isBasicSparkling
+                 !makeCoffee.isBasicSparkling &&
+                  !makeCoffee.isAfterIcedTea &&
+                 ! makeCoffee.isAfterGreenTea
                 ) return true;
             else return false;
         }
