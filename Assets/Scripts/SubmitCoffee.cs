@@ -19,9 +19,15 @@ public class SubmitCoffee : MonoBehaviour
     public void JudgeCoffee()
     {
         if (getRecipe())
+        {
             Debug.Log("성공! 돈 올리기");
+            Money.money += 200;
+        }
         else
+        {
             Debug.Log("실패! 돈 안 올림");
+            Money.money += 0;
+        }
 
         // 메인화면으로
         onLoadMain();
