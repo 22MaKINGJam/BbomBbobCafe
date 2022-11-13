@@ -56,14 +56,14 @@ public class TimeLimit : MonoBehaviour
 
             if(setTime < 10)
             {
-                TimeText.text = "00 : " + (int)sec;
+                TimeText.text = "00 : 0" + (int)sec;
             }
         }
 
         if (setTime <= 0) // 제한시간 종료시 00분 00초 고정 및 산타옷 구매씬으로 넘어감
         {
             TimeText.text = "00 : 00";
-            SceneManager.LoadScene("구매화면");
+            SceneManager.LoadScene("End");
         }
     }
 }
