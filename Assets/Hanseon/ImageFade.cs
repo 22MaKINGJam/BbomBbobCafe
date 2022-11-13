@@ -10,7 +10,7 @@ public class ImageFade : MonoBehaviour
     void Awake()
     {
         image = GetComponent<Image>();
-        StartCoroutine(FadeImageToFullAlpha());
+        StartCoroutine(FadeTextToZero());
     }
 
     public IEnumerator FadeImageToFullAlpha() // 알파값 0에서 1로 전환

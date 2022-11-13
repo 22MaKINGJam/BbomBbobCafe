@@ -4,23 +4,33 @@ using UnityEngine;
 
 public class HandlePopup : MonoBehaviour
 {
-    public GameObject gameObject; // 팝업창
+    public GameObject gameObjectPopup; // 팝업창
+
+    public AudioClip openCloseSound; // 열릴 때 닫힐 때 소리
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
     }
+
     // 팝업 키기
     public void handleOpenPopup()
     {
+        audioSource.clip = openCloseSound;
+        audioSource.Play();
         Time.timeScale = 0f;
+        gameObjectPopup.SetActive(true);
 
-        gameObject.SetActive(true);
     }
     // 팝업 키기
     public void handleClosePopup()
     {
+        audioSource.clip = openCloseSound;
+        audioSource.Play();
         Time.timeScale = 1f;
-        gameObject.SetActive(false);
+        gameObjectPopup.SetActive(false);
+
     }
 }
