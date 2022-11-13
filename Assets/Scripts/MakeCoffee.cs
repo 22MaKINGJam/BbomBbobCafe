@@ -41,6 +41,9 @@ public class MakeCoffee : MonoBehaviour
     public bool isBasicMilk = false; // 우유
     public bool isBasicSparkling = false; // 탄산수
 
+    public bool isAfterIcedTea = false; // 물 + 아이스티
+    public bool isAfterGreenTea = false; // 우유 + 녹차가루
+
     //PowderIcedTea, PowderLuck, PowderLove, PowderGreenTea
     // DecoLemon, DecoClover, DecoCookie, DecoStrawberry, DecoGreenTea
     //SyrupSea, SyrupSignature, SyrupLemon
@@ -98,6 +101,8 @@ public class MakeCoffee : MonoBehaviour
         //this.transform.Find("BasicWater").gameObject.SetActive(isBasicWater);
         //this.transform.Find("BasicMilk").gameObject.SetActive(isBasicMilk);
 
+
+
         isPowderIcedTea = this.transform.Find("PowderIcedTea").gameObject.activeSelf;
         isPowderLuck = this.transform.Find("PowderLuck").gameObject.activeSelf;
         isPowderLove = this.transform.Find("PowderLove").gameObject.activeSelf;
@@ -119,5 +124,22 @@ public class MakeCoffee : MonoBehaviour
         isBasicWater = this.transform.Find("BasicWater").gameObject.activeSelf;
         isBasicMilk = this.transform.Find("BasicMilk").gameObject.activeSelf;
         isBasicSparkling = this.transform.Find("BasicSparkling").gameObject.activeSelf;
+
+        // 물+아이스티가루
+        if (isBasicWater && isPowderIcedTea)
+        {
+            this.transform.Find("PowderIcedTea").gameObject.SetActive(false);
+            this.transform.Find("BasicWater").gameObject.SetActive(false);
+            this.transform.Find("AfterIcedTea").gameObject.SetActive(true);
+        }
+        //우유+녹차가루
+        if (isBasicMilk && isPowderGreenTea)
+        {
+            this.transform.Find("BasicMilk").gameObject.SetActive(false);
+            this.transform.Find("PowderGreenTea").gameObject.SetActive(false);
+            this.transform.Find("AfterGreenTea").gameObject.SetActive(true);
+        }
+        isAfterIcedTea = this.transform.Find("AfterIcedTea").gameObject.activeSelf;
+        isAfterGreenTea = this.transform.Find("AfterGreenTea").gameObject.activeSelf;
     }
 }
