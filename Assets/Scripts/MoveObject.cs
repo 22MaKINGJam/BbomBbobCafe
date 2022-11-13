@@ -48,11 +48,15 @@ public class MoveObject : MonoBehaviour
     // 들어갈 때, 머무를 때 둘 다 인식
     void OnTriggerStay2D(Collider2D other)
     {
+        
         // 충돌 중일 때 && 컵 위에서 클릭한 경우만 활성화
-        if (Input.GetMouseButtonDown(0) && isClick&&other.gameObject.name == "Cup")
+        if (Input.GetMouseButtonDown(0) && isClick && other.gameObject.name == "Cup")
         {
+            //Debug.Log("들어옴");
             //Debug.Log(getIngredient().gameObject.name + "컵 위다");
             getIngredient().gameObject.SetActive(true); // 활성화
+            transform.position = DefaultPos; // 다시 제자리로
+            isClick = false;
         }
     }
     void OnTriggerEnter2D(Collider2D other)
@@ -60,8 +64,11 @@ public class MoveObject : MonoBehaviour
         // 충돌 중일 때 && 컵 위에서 클릭한 경우만 활성화
         if (Input.GetMouseButtonDown(0) && isClick && other.gameObject.name == "Cup")
         {
+            //Debug.Log("진행중");
             //Debug.Log(getIngredient().gameObject.name + "컵 위다");
             getIngredient().gameObject.SetActive(true); // 활성화
+            transform.position = DefaultPos; // 다시 제자리로
+            isClick = false;
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -69,8 +76,11 @@ public class MoveObject : MonoBehaviour
         // 충돌 중일 때 && 컵 위에서 클릭한 경우만 활성화
         if (Input.GetMouseButtonDown(0) && isClick && other.gameObject.name == "Cup")
         {
+            //Debug.Log("나감");
             //Debug.Log(getIngredient().gameObject.name + "컵 위다");
             getIngredient().gameObject.SetActive(true); // 활성화
+            transform.position = DefaultPos; // 다시 제자리로
+            isClick = false;
         }
     }
 
@@ -80,10 +90,11 @@ public class MoveObject : MonoBehaviour
         // 컵 속 재료들에 접근해서 지금 이름에 맞는 재료를 리턴
         foreach (Transform child in makeCoffee.transform)
         {
-            Debug.Log(this.transform.name);
+            //Debug.Log(this.transform.name);
             if (child.name == this.transform.name)
                 return child;
         }
         return null;
     }
+
 }

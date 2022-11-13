@@ -31,12 +31,12 @@ public class CoffeeRecipe : MonoBehaviour
 
     private int[] LemonAdeIngredients = { 4, 9, 12, 17 };
     private int[] BlueLemonAdeIngredients = { 4, 9, 10, 12, 17 };
-    private int[] IcedTeanoIngredients = { 0, 12, 14, 15 };
-    private int[] luckIcedTeanoIngredients = { 0, 1, 5, 12, 14, 15 };
-    private int[] GreenTeaLatteIngredients = { 3, 8, 12, 16 };
-    private int[] LoveGreenTeaLatteIngredients = { 2, 3, 7, 8, 12, 16 };
-    private int[] BbomBbobLatteIngredients = { 10, 13, 14, 16 };
-    private int[] CookieBbomBbobLatteIngredients = { 6, 10, 12, 13, 14, 16 };
+    private int[] IcedTeanoIngredients = { 12, 14, 0, 15 };
+    private int[] luckIcedTeanoIngredients = { 1, 5, 0, 12, 14, 15 };
+    private int[] GreenTeaLatteIngredients = { 8, 12, 16, 3 };
+    private int[] LoveGreenTeaLatteIngredients = { 12, 16, 7, 8, 2, 3, };
+    private int[] BbomBbobLatteIngredients = { 16, 12, 13, 14, 11 };
+    private int[] CookieBbomBbobLatteIngredients = { 12, 14, 11, 13, 16, 6 };
 
     // Start is called before the first frame update
     void Start()

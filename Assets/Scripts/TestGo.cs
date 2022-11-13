@@ -13,7 +13,7 @@ public class TestGo : MonoBehaviour
     public void onLoadMake()
     {
         // 메인에서 이렇게 넘어가면 됨
-        GoalCoffee.goal = "GreenTeaLatte";
+        GoalCoffee.goal = "CookieBbomBbobLatte";
         SceneManager.LoadScene("Make");
     }
 
