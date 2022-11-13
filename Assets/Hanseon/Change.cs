@@ -14,4 +14,8 @@ public class Change : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+    public void SceneStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
 }
