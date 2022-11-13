@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class TextFade : MonoBehaviour
 {
     private UnityEngine.UI.Text text;
-    float n;
 
     void Start()
     {
