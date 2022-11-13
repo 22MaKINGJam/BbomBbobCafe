@@ -3098,6 +3098,7 @@ GameObject:
   - component: {fileID: 1125180790}
   - component: {fileID: 1125180789}
   - component: {fileID: 1125180791}
+  - component: {fileID: 1125180792}
   m_Layer: 5
   m_Name: txt_money
   m_TagString: Untagged
@@ -3156,7 +3157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &1125180790
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3177,6 +3178,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2d112d45014f94faa66c34e2c937de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1125180792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125180787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cd484b3acfc3d449499a9b1ee232b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeText: {fileID: 1125180789}
 --- !u!1 &1133036966
 GameObject:
   m_ObjectHideFlags: 0

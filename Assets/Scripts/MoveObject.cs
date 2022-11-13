@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
+    public HandlePopup handlePopup;
+
+
     public MakeCoffee makeCoffee;// 각 재료를 컵에 담기 위함
 
     public Vector3 DefaultPos; // 원래 자리
@@ -29,9 +32,17 @@ public class MoveObject : MonoBehaviour
         DefaultPos = this.gameObject.transform.position;
 
         audioSource = GetComponent<AudioSource>();
+
+        handlePopup = FindObjectOfType<HandlePopup>();
+
     }
     void Update()
     {
+        if (handlePopup.gameObjectPopup.activeSelf)
+        {
+            isClick = false;
+            return;
+        }
         // 클릭했으면, 내 마우스에 따라다니도록
         if (isClick)
         {

@@ -9,9 +9,9 @@ public class Buy : MonoBehaviour
     public GameObject gameui;
     public AudioSource SuccessSound;
 
-    public void CanBuy(int money)
+    public void CanBuy()
     {
-        if (money >= 10000)
+        if (Money.money >= 2000)
         {
             find = GameObject.Find("ClothCanvas").transform.Find("Success");
 

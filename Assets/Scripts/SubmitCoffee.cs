@@ -8,24 +8,33 @@ public class SubmitCoffee : MonoBehaviour
     // MakeCoffee 에서 목표 음료 가져오기
     public MakeCoffee makeCoffee;
 
+    public AudioClip sound_success; //성공
+    public AudioClip sound_fail; //실패
+
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         // 활성화 되어있는지 접근하기 위함
         makeCoffee = FindObjectOfType<MakeCoffee>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // 버튼 클릭 시 실행
     public void JudgeCoffee()
     {
+
         if (getRecipe())
         {
-            Debug.Log("성공! 돈 올리기");
+            audioSource.clip = sound_success;
+            audioSource.Play();
             Money.money += 200;
         }
         else
         {
-            Debug.Log("실패! 돈 안 올림");
+            audioSource.clip = sound_fail;
+            audioSource.Play();
             Money.money += 0;
         }
 
