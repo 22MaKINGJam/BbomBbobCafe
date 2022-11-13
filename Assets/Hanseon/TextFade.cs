@@ -8,7 +8,6 @@ public class TextFade : MonoBehaviour
 {
     private UnityEngine.UI.Text text;
     float n;
-    public Transform find;
 
     void Start()
     {
